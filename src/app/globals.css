@@ -2,32 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: "IRANSansMedium";
+    src: url('../assets/fonts/IRANSansWeb_Medium.9f338149d9f52fe4faab.woff2');
+    font-display: 'fallback';
+}
+@font-face {
+    font-family: "IRANSansSmall";
+    src: url('../assets/fonts/IRANSansWeb.cdb118d6a351d596a2d7.woff2');
+    font-display: 'fallback';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+    @apply font-[IRANSansMedium] box-border
+}
+.support-header-container {
+    @apply h-[260px] bg-contain bg-no-repeat flex flex-col items-center justify-end pb-6 px-6
+}
+.support-header-wellcome {
+    @apply text-white text-[2rem] text-center pb-2
+}
+.support-header-help {
+    @apply text-white text-lg text-[1.125rem] pb-3
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.searchArticle-container {
+    @apply w-full px-2 flex bg-white items-center h-9 rounded-sm
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.searchArticle-input {
+    @apply px-2 placeholder:text-[#DBDBDB] outline-none
 }

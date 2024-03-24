@@ -32,3 +32,29 @@
 .searchArticle-input {
     @apply px-2 placeholder:text-[#DBDBDB] outline-none
 }
+
+.common-questions-container {
+    @apply px-4 pt-8 
+}
+.common-questions-title {
+    @apply w-full text-center text-lg mb-6
+}
+
+.question-card-container {
+    @apply w-full flex items-center border-[1px] rounded-[4px] p-4 border-[#ebebeb] my-4 justify-between
+}
+.question-card-text {
+    @apply leading-9 pl-6
+}
+.question-card-icon {
+    @apply rounded-[50%] hover:bg-[#ebebeb] w-10 h-10 flex justify-center items-center
+}
+
+.slider-menu-item {
+    @apply cursor-pointer
+}
+
+.swiper-slide {
+    @apply px-6 py-4 text-red-700 min-w-fit
+}
+

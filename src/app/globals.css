@@ -58,3 +58,56 @@
     @apply px-6 py-4 text-red-700 min-w-fit
 }
 
+.support-slider-container {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    @apply inline-block overflow-x-auto overflow-y-hidden w-full whitespace-nowrap
+}
+
+.slider-item {
+    transition: background-color 0.5s ease;
+    @apply inline-block px-6 py-3 text-[#707070] font-[IRANSansSmall] hover:bg-[#ebebeb]
+    cursor-pointer
+}
+.item-active {
+    @apply bg-red-50 text-[#a62626]
+}
+
+.support-slider-prev, .support-slider-next {
+    @apply absolute top-4 z-10
+}
+.support-slider-prev {
+    @apply right-0
+}
+.support-slider-next {
+    @apply left-0
+}
+.topic-container {
+    @apply border-b border-[#DBDBDB] py-4 cursor-pointer
+}
+.topic-title-container {
+    @apply flex justify-between mb-1
+}
+.topic-title {
+    @apply text-[#707070]
+}
+.topic-questions-container {
+    transition: max-height 0.5s ease;
+    @apply max-h-0 overflow-hidden 
+
+
+}
+
+.open-questions-list {
+    transform: scaleY(-1);
+    
+}
+.closed-questions-list {
+    transition: transform 0.3s ease;
+}
+.open-question-container {
+    @apply max-h-[800px]
+}
+.topic-question {
+    @apply text-[#a62626] cursor-pointer py-2
+}
